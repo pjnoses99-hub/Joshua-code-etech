@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DADDY G</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1b32;
+        }
+    </style>
+</head>
+<body class="flex flex-col lg:flex-row text-white min-h-screen">
+
+    <!-- Mobile Sidebar Button -->
+    <div class="lg:hidden p-4">
+        <button id="sidebar-toggle" class="text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div id="sidebar" class="fixed inset-y-0 left-0 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out bg-[#0d1b32] w-64 p-6 flex flex-col items-center z-50">
+        <div class="mb-8">
+            <svg class="w-16 h-16 text-yellow-400" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.686 2 6 4.686 6 8s2.686 6 6 6s6-2.686 6-6s-2.686-6-6-6zM9 10a3 3 0 106 0 3 3 0 10-6 0zM12 16c-3.14 0-6.096 1.542-7.848 4.148A11.968 11.968 0 0012 22c3.14 0 6.096-1.542 7.848-4.148A11.968 11.968 0 0012 16z" fill="#FBBF24"/>
+                <path d="M12 24c-6.627 0-12-5.373-12-12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12zM12 2c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10z" fill="#FBBF24" fill-opacity="0.2"/>
+            </svg>
+        </div>
+
+        <nav class="w-full space-y-2">
+            <a href="#" class="flex items-center space-x-2 p-3 rounded-lg text-yellow-400 bg-blue-700/50 transition duration-200">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 9v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9L12 2zm0 15c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                </svg>
+                <span>HOME</span>
+            </a>
+            <div class="py-2">
+                <span class="text-yellow-400 text-sm tracking-wider">SELL</span>
+                <div class="pl-4 space-y-1 mt-1">
+                    <a href="https://www.raket.ph/products?page=1" class="flex items-center space-x-2 p-2 rounded-lg text-white hover:bg-blue-600/50 transition duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M3 9h18m-9 12h9m-9-4h9m-9-4h9"/>
+                        </svg>
+                        <span>Own Product</span>
+                    </a>
+                    <a href="https://psa.gov.ph/statistics/national-accounts" class="flex items-center space-x-2 p-2 rounded-lg text-white hover:bg-blue-600/50 transition duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9v10a2 2 0 01-2 2H9a2 2 0 01-2-2V9m2 4h4m-4-8a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                        <span>Profit</span>
+                    </a>
+                    <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GRB8EbntmTHpOI40Ha2ioqWYIoJCrvLS1xbPIZSHTNHEHikt49dSsIfU&s=10" class="flex items-center space-x-2 p-2 rounded-lg text-white hover:bg-blue-600/50 transition duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h4m-4 0c0-2.485-2.5-4-5-4s-5 1.515-5 4-2.5 4-5 4z"/>
+                        </svg>
+                        <span>Weekly Gain</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-2 p-2 rounded-lg text-white hover:bg-blue-600/50 transition duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                        </svg>
+                        <span>Advertisement</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-2 p-2 rounded-lg text-white hover:bg-blue-600/50 transition duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2a2 2 0 012-2z"/>
+                        </svg>
+                        <span>Recommendation</span>
+                    </a>
+                    <a href="https://facebook.com/joshua.mauricio.501" class="flex items-center space-x-2 p-2 rounded-lg text-white hover:bg-blue-600/50 transition duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-4-2H7a4 4 0 01-4-4V7a4 4 0 014-4h10a4 4 0 014 4v7a4 4 0 01-4 4z"/>
+                        </svg>
+                        <span>Market Profile</span>
+                    </a>
+                </div>
+            </div>
+            <div class="py-2">
+                <span class="text-blue-400 text-sm tracking-wider">BUY</span>
+                <div class="pl-4 space-y-1 mt-1">
+                    <a href="https://shopee.ph" class="flex items-center space-x-2 p-2 rounded-lg text-white hover:bg-blue-600/50 transition duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        <span>Trending</span>
+                    </a>
+                    <a href="https://seller-ph.tiktok.com" class="flex items-center space-x-2 p-2 rounded-lg text-white hover:bg-blue-600/50 transition duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                        <span>FY Products</span>
+                    </a>
+                    <a href="https://shopee.ph/m/payday-sale" class="flex items-center space-x-2 p-2 rounded-lg text-white hover:bg-blue-600/50 transition duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h4m-4 0c0-2.485-2.5-4-5-4s-5 1.515-5 4-2.5 4-5 4z"/>
+                        </svg>
+                        <span>Sales</span>
+                    </a>
+                </div>
+</div>
+            <div class="py-2">
+                <span class="text-green-400 text-sm tracking-wider">PERSONAL TRACKER</span>
+                <div class="pl-4 space-y-1 mt-1">
+                    <a href="https://www.calendarlabs.com/excel-calendar" class="flex items-center space-x-2 p-2 rounded-lg text-white hover:bg-blue-600/50 transition duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2c-3.31 0-6 2.69-6 6v4h2V8a4 4 0 018 0v2a4 4 0 01-8 0v2h2v-2a2 2 0 004 0v2a2 2 0 00-4 0v2h2v-2a2 2 0 004 0v2h2v-2a4 4 0 01-4-4V8c0-3.31-2.69-6-6-6zM8 12h8m-8 2h8"/>
+                        </svg>
+                        <span>Monthly Allowance</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-2 p-2 rounded-lg text-white hover:bg-blue-600/50 transition duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 4H3a2 2 0 00-2 2v14a2 2 0 002 2h18a2 2 0 002-2V6a2 2 0 00-2-2zM3 6h18v2H3V6zm0 4h18v10H3V10z"/>
+                        </svg>
+                        <span>Weekly Schedule</span>
+                    </a>
+                    <a href="https://google.keep.com" class="flex items-center space-x-2 p-2 rounded-lg text-white hover:bg-blue-600/50 transition duration-200">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                        <span>Daily List of Activities</span>
+                    </a>
+               
+ </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="flex-grow flex flex-col p-4 lg:p-10 ml-0 lg:ml-64 bg-blue-900/50 rounded-lg lg:rounded-l-3xl shadow-lg transition-all duration-300">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row items-center justify-between p-4 bg-blue-900 rounded-2xl shadow-md mb-6 relative">
+            <div class="flex items-center w-full md:w-auto mb-4 md:mb-0">
+                <div class="w-16 h-16 mr-4 bg-[#21212c] rounded-full flex items-center justify-center p-2">
+                    <svg class="w-full h-full text-yellow-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8.686 2 6 4.686 6 8s2.686 6 6 6s6-2.686 6-6s-2.686-6-6-6zM9 10a3 3 0 106 0 3 3 0 10-6 0zM12 16c-3.14 0-6.096 1.542-7.848 4.148A11.968 11.968 0 0012 22c3.14 0 6.096-1.542 7.848-4.148A11.968 11.968 0 0012 16z" fill="#FBBF24"/>
+                        <path d="M12 24c-6.627 0-12-5.373-12-12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12zM12 2c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10z" fill="#FBBF24" fill-opacity="0.2"/>
+                    </svg>
+                </div>
+                <div class="text-5xl font-bold font-family: 'Lobster', cursive text-yellow-400">DADDY<span> <div class="text-10x1 font-bold text-yellow font-family: 'Lobster', cursive"> <h1><i>G<i><h1></span></div>
+            </div>
+
+            <div class="relative w-full md:w-1/2 flex items-center md:mr-4 mb-4 md:mb-0">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <input type="text" placeholder="Search..." class="w-full pl-10 pr-4 py-2 rounded-2xl bg-blue-900/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300">
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <div class="p-3 bg-blue-900/50 rounded-full cursor-pointer hover:bg-blue-600/50 transition duration-200">
+                    <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="p-3 bg-blue-900/50 rounded-full cursor-pointer hover:bg-blue-600/50 transition duration-200">
+                    <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M11.49 3.178c-.347-.354-.925-.354-1.272 0l-1.928 1.95a.874.874 0 00-.21.468v.172a.874.874 0 00.21.468l1.928 1.95c.347.354.925.354 1.272 0l1.928-1.95a.874.874 0 00.21-.468V4.65c0-.25-.101-.48-.276-.646a.874.874 0 00-.21-.468l-1.928-1.95zm-2.822.454L6.75 6.25a.875.875 0 00.21.468v.172c0 .25-.101.48-.276.646a.874.874 0 00-.21.468l1.928 1.95c.347.354.925.354 1.272 0l1.928-1.95a.874.874 0 00.21-.468V6.75c0-.25-.101-.48-.276-.646a.874.874 0 00-.21-.468L11.75 3.632a.874.874 0 00-1.272 0L8.668 5.582a.874.874 0 00-.21.468V6.25a.874.874 0 00.21.468z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="p-3 bg-blue-900/50 rounded-full cursor-pointer hover:bg-blue-600/50 transition duration-200">
+                    <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM5 9a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Cards Grid -->
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 flex-grow">
+            <!-- Card 1: Sell -->
+            <div class="bc-blue-700 rounded-3xl overflow-hidden shadow-x1 relative">
+                <div class="relative w-full h-48">
+                    <img src="https://placehold.co/600x300/2a3b5a/ffffff?text=Bili ka na plis" alt="Item" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-yellow-900/80 to-transparent"></div>
+                </div>
+                <div class="p-6 absolute bottom-0 w-full flex justify-between items-center">
+                    <span class="text-3xl font-bold text-yellow-400">SELL</span>
+                    <button class="bg-yellow-400 text-yellow-900 p-2 rounded-full transform hover:scale-110 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 2: Buy -->
+            <div class="bg-blue-900 rounded-3xl overflow-hidden shadow-xl relative">
+                <div class="relative w-full h-48">
+                    <img src="https://placehold.co/600x400/2a3b5a/ffffff?text=Nu paninda mo?" alt="Buy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent"></div>
+                </div>
+                <div class="p-6 absolute bottom-0 w-full flex justify-between items-center">
+                    <span class="text-3xl font-bold text-blue-400">BUY</span>
+                    <button class="bg-blue-400 text-blue-900 p-2 rounded-full transform hover:scale-110 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 3: Personal Tracker -->
+            <div class="bg-blue-900 rounded-3xl overflow-hidden shadow-xl relative">
+                <div class="relative w-full h-48">
+                    <img src="https://placehold.co/600x400/2a3b5a/ffffff?text=Kabaw ka lang" alt="Tracker" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-green-700/50 to-transparent"></div>
+                </div>
+                <div class="p-6 absolute bottom-0 w-full flex justify-between items-center">
+                    <span class="text-2xl font-bold text-green-400">PERSONAL TRACKER</span>
+                    <button class="bg-green-400 text-green-900 p-2 rounded-full transform hover:scale-110 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 4: Study -->
+            <div class="bg-blue-900 rounded-3xl overflow-hidden shadow-xl relative">
+                <div class="relative w-full h-48">
+                    <img src="https://placehold.co/600x400/2a3b5a/ffffff?text=Hui Study first?" alt="Study" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-red-700/80 to-transparent"></div>
+                </div>
+                <div class="p-6 absolute bottom-0 w-full flex justify-between items-center">
+                    <span class="text-3xl font-bold text-red-400">STUDY</span>
+                    <button class="bg-red-400 text-red-900 p-2 rounded-full transform hover:scale-110 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Right Sidebar for widgets -->
+    <div class="bg-blue-900/50 w-full lg:w-72 p-6 rounded-2xl lg:rounded-l-3xl shadow-lg mt-6 lg:mt-0 relative">
+        <button id="right-sidebar-toggle" class="absolute top-1/2 -left-6 transform -translate-y-1/2 bg-blue-900/50 p-2 rounded-full shadow-lg transition duration-300 hover:bg-blue-600/50 focus:outline-none">
+            <svg class="w-6 h-6 text-yellow-400 transform rotate-180" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+        </button>
+        <div class="space-y-6">
+            <div class="flex items-center space-x-4 bg-blue-900 rounded-full p-3 shadow-md">
+                <div class="bg-blue-700/70 rounded-full p-2">
+                    <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5V12h2v5.5h-2zm1-9.5c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"/>
+                    </svg>
+                </div>
+                <span class="text-white">Trips</span>
+            </div>
+            <div class="flex items-center space-x-4 bg-blue-900 rounded-full p-3 shadow-md">
+                <div class="bg-blue-700/70 rounded-full p-2">
+                    <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm-1 15v-4H8v-2h3V6h2v5h3v2h-3v4h-2z"/>
+                    </svg>
+                </div>
+                <span class="text-white">Reminder</span>
+            </div>
+            <div class="flex items-center space-x-4 bg-blue-900 rounded-full p-3 shadow-md">
+                <div class="bg-blue-700/70 rounded-full p-2">
+                    <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm-1 15v-4H8v-2h3V6h2v5h3v2h-3v4h-2z"/>
+                    </svg>
+                </div>
+                <span class="text-white">Notes</span>
+            </div>
+            <div class="flex items-center space-x-4 bg-blue-900 rounded-full p-3 shadow-md">
+                <div class="bg-blue-700/70 rounded-full p-2">
+                    <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm-1 15v-4H8v-2h3V6h2v5h3v2h-3v4h-2z"/>
+                    </svg>
+                </div>
+                <span class="text-white">Schedule</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            const rightSidebar = document.querySelector('.lg\\:w-72');
+            const rightSidebarToggle = document.getElementById('right-sidebar-toggle');
+            const mainContent = document.querySelector('.ml-0');
+
+            sidebarToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('-translate-x-full');
+            });
+
+            rightSidebarToggle.addEventListener('click', () => {
+                rightSidebar.classList.toggle('lg:translate-x-full');
+                rightSidebarToggle.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+</body>
+</html>
+
